@@ -11,7 +11,7 @@ public class ClientExample {
     private static final String ABSOLUTE_PATH_TO_JAVA_AGENT_JAR = "For you to fill in";
     private static final String PID_TO_ATTACH_TO = "For you to fill in";
 
-    public static void main(String args) throws IOException, AgentLoadException, AgentInitializationException, AttachNotSupportedException, NotBoundException {
+    public static void main(String[] args) throws IOException, AgentLoadException, AgentInitializationException, AttachNotSupportedException, NotBoundException {
         for (VirtualMachineDescriptor vmd : VirtualMachine.list()) {
             if (vmd.id().equals(PID_TO_ATTACH_TO)) {
                 VirtualMachine vm = VirtualMachine.attach(vmd);
